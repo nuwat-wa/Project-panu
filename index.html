@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkPassword() {
+            // กำหนดรหัสและหน้าเป้าหมาย
+            let passwordPages = {
+                "601-07856": "page1.html",
+                "601-07932": "page2.html",
+                "601-08051": "page3.html",
+                "601-08532": "page4.html",
+                "601-08533": "page5.html",
+                "601-08534": "page6.html",
+                "601-07846": "page7.html",
+                "601-07874": "page8.html",
+                "601-07942": "page9.html",
+                "601-07948": "page10.html",
+                "601-07962": "page11.html",
+                "601-07963": "page12.html",
+                "601-08535": "page13.html",
+                "601-08536": "page14.html",
+                "601-08537": "page15.html",
+                "601-08538": "page16.html",
+                "601-08539": "page17.html",
+                "601-08540": "page18.html",
+                "601-08543": "page19.html",
+                "601-08544": "page20.html",
+                "601-08545": "page21.html",
+                "601-08546": "page22.html",
+                "601-08548": "page23.html",
+                "601-08549": "page24.html",
+                "601-08551": "page25.html",
+                "601-08552": "page26.html",
+                "601-08553": "page27.html",
+                "601-": "page28.html",
+                "601-": "page29.html",
+                "601-": "page30.html",
+                "601-": "page31.html",
+                "601-": "page32.html",
+            };
+
+            let inputPassword = document.getElementById("passwordInput").value;
+            
+            // ตรวจสอบว่ารหัสที่ป้อนมีอยู่ใน Object หรือไม่
+            if (passwordPages[inputPassword]) {
+                window.location.href = passwordPages[inputPassword]; // ไปยังหน้าที่กำหนด
+            } else {
+                alert("รหัสผ่านไม่ถูกต้อง โปรดกรอกรหัสลับบที่ได้จาก PANU!!");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>LOGIN</h1>
+        <p lass="text"><small>โปรดกรอกรหัสลับบที่ได้จาก PANU!!</small></p>
+        <label for="passwordInput"></label>
+        <input type="password" id="passwordInput" placeholder="ป้อนรหัสผ่าน">
+        <br>
+        <br>
+        <button onclick="checkPassword()">ยืนยัน</button>
+
+    </div>
+    
+</body>
+</html>

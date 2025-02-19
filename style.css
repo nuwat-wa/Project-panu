@@ -1,0 +1,103 @@
+body{
+    background-color: hsl(209, 100%, 5%);
+    color: #91ffd1;
+    font-family: "Noto Sans Thai", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+input{
+    color: #009859;
+    border-radius: 15px;
+    border: 0.1vh solid rgb(255, 255, 255);
+    width: 230px;
+    height: 26px;
+    opacity: 10;
+    background: transparent;
+   
+    
+}
+button{
+    background-color: #91ffd1;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 180px;
+    height: 25px;
+    font-family: "Noto Sans Thai", serif;
+    position: relative;
+    display: block;
+    margin-bottom: auto;
+    left: 5vh;
+    
+}
+h1{
+    text-shadow: 5px 4px 10px #007041;
+    color: #91ffd1;
+    
+}
+.container{ 
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    width: 250px;
+    margin: 0 20px;
+    padding: 10px 50px 45px;
+    border-radius: 1.25rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    color: #91ffd1;
+    box-shadow: 0 0 10px rgb(0,0,0,0.9);
+   
+
+}
+.text{
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-family: "Noto Sans Thai", serif;
+    border-right: 1px solid;
+    width: 92%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+         typing 5s steps(40),
+         cursor .3s step-end infinite alternate;
+    animation-iteration-count: infinite;
+}
+/* cursor blinking */
+@keyframes cursor {
+    50% { border-color: transparent}
+}
+/* typing effect */
+@keyframes typing {
+    from {width:0}
+}
+form::after{
+    content: "";
+    background-size: 100%;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    opacity: 0.05;
+   
+}
+
+@media screen and(min-width:500px) {
+    body{
+        background-image: url(601.css.jpg);
+    }
+     
+    
+}
+a{
+    text-decoration: none;
+}
+

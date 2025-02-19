@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color:#00cc00;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#output {
+    font-size: 17px;
+    white-space: pre-line; /* รองรับขึ้นบรรทัดใหม่ */
+}
+
+.typing {
+    display: inline-block;
+    border-right: 2px solid white;
+    animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

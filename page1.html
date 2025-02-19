@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellcome My Friend</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <h1>FRIEND601</h1>
+    <div id="output"></div>
+
+    <script>
+        const texts = [
+            "หนังสือเล่มโปรด ที่ชื่อว่า วัยเรียน เล่มนี้",
+            "ที่เขียนมาด้วยตัวเอง", 
+            "ย่อหน้าสุดท้ายเขียนไว้ว่า...",
+            "ด้วยรักและคิดถึงเสมอ..."
+        ];
+        
+        let index = 0; 
+
+        function typeText(text, callback) {
+            let i = 0;
+            const output = document.getElementById('output');
+            const line = document.createElement('div');
+            line.classList.add('typing');
+            output.appendChild(line);
+
+            function type() {
+                if (i < text.length) {
+                    line.textContent += text[i];
+                    i++;
+                    setTimeout(type, 100); // ควบคุมความเร็วการพิมพ์ (ปรับได้)
+                } else {
+                    line.classList.remove('typing'); // เอาเส้นกระพริบออกหลังพิมพ์เสร็จ
+                    callback();
+                }
+            }
+            type();
+        }
+
+        function startTyping() {
+            if (index < texts.length) {
+                typeText(texts[index], () => {
+                    index++;
+                    setTimeout(startTyping, 2000); // เวลาพักก่อนขึ้นบรรทัดใหม่
+                });
+            }
+        }
+
+        startTyping();
+    </script>
+</body>
+</html>
